@@ -1,0 +1,54 @@
+{
+    "name": "coderatio/laravel-voyager-dynamic-select-field",
+    "description": "A dynamic select field for laravel voyager",
+    "keywords": [
+        "coderatio",
+        "laravel-voyager-dynamic-select-field"
+    ],
+    "homepage": "https://github.com/coderatio/laravel-voyager-dynamic-select-field",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Josiah Ovye Yahaya",
+            "email": "josiahoyahaya@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coderatio\\LaravelVoyagerDynamicSelectField\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Coderatio\\LaravelVoyagerDynamicSelectField\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coderatio\\LaravelVoyagerDynamicSelectField\\LaravelVoyagerDynamicSelectFieldServiceProvider"
+            ],
+            "aliases": {
+                "LaravelVoyagerDynamicSelectField": "Coderatio\\LaravelVoyagerDynamicSelectField\\LaravelVoyagerDynamicSelectFieldFacade"
+            }
+        }
+    }
+}
